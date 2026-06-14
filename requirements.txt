@@ -1,0 +1,10 @@
+requests>=2.31
+Pillow>=10.0
+imagehash>=4.3
+numpy>=1.26
+opencv-python-headless>=4.9
+# optional GPU stages:
+# ultralytics>=8.4   # YOLO crop
+# rembg[gpu]>=2.0    # background removal (BiRefNet/U2-Net)
+# realesrgan>=0.3    # upscale
+# easyocr>=1.7       # watermark detection
