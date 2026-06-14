@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wiin-image-pipeline"
+version = "0.1.0"
+description = "Reference pipeline for catalog product shots: source search, cheap pre-filters, pHash dedup, recipe-based background-removal gating, local YOLO/rembg/Real-ESRGAN."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "wiin.agency" }]
+requires-python = ">=3.10"
+keywords = ["computer-vision", "background-removal", "rembg", "image-pipeline", "ecommerce", "deduplication", "serper"]
+dependencies = ["requests>=2.31", "Pillow>=10.0", "imagehash>=4.3", "numpy>=1.26", "opencv-python-headless>=4.9"]
+
+[project.optional-dependencies]
+gpu = ["ultralytics>=8.4", "rembg[gpu]>=2.0", "realesrgan>=0.3", "easyocr>=1.7"]
+dev = ["pytest>=8.0"]
+
+[project.urls]
+Homepage = "https://github.com/ai-sales-agency/wiin-image-pipeline"
+"Made by" = "https://wiin.agency"
+
+[tool.setuptools.packages.find]
+where = ["src"]
